@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Adivinanza</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function mostrarRespuesta() {
+      document.getElementById("respuesta").style.display = "block";
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1>Juego de Adivinanzas</h1>
+    <p>¡Pon a prueba tu ingenio con estas adivinanzas divertidas!</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+     
+    </ul>
+  </nav>
+
+  <section id="adivinanza">
+    <h2>Adivinanza del día</h2>
+    <p>Blanca por dentro, verde por fuera. Si quieres que te lo diga, espera.</p>
+
+    <button onclick="mostrarRespuesta()">Mostrar respuesta</button>
+
+    <p id="respuesta" style="display: none;"><strong>Respuesta:</strong> La pera 🍐</p>
+  </section>
+</body>
+</html>
