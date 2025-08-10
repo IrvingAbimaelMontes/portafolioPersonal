@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gestión de Tareas</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Gestión de Tareas (LocalStorage)</h1>
+  </header>
+      <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            
+        </ul>
+    </nav>
+
+  <main>
+    <!-- Formulario -->
+    <section class="card">
+      <h2 class="section-title">Nueva / Buscar / Eliminar</h2>
+      <form id="formTarea" novalidate>
+        <div class="grid">
+          <div class="col-6">
+            <label2 for="titulo">Título de la Tarea</label2>
+            <input id="titulo" name="titulo" type="text" placeholder="Ej. Entregar reporte semanal" required />
+          </div>
+          <div class="col-3">
+            <label2 for="vencimiento">Fecha de Vencimiento</label2>
+            <input id="vencimiento" name="vencimiento" type="date" required />
+          </div>
+          <div class="col-12">
+            <label2 for="descripcion">Descripción</label2>
+            <textarea id="descripcion" name="descripcion" placeholder="Detalles, checklist, enlaces…"></textarea>
+          </div>
+        </div>
+        <div class="actions">
+          <button id="btnAgregar" type="submit">Agregar tarea</button>
+          <button id="btnBuscar" type="button" class="secondary">Buscar por título</button>
+          <button id="btnEliminar" type="button" class="warn">Eliminar por título</button>
+          <button id="btnVerTodo" type="button" class="secondary">Ver todas</button>
+        </div>
+        <div id="mensaje" class="msg" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <!-- Lista / Tabla de tareas -->
+    <section class="card">
+      <div class="table-head">
+        <h2 class="section-title">Tareas</h2>
+        <span class="muted" id="contador"></span>
+      </div>
+      <div class="table-wrap">
+        <table aria-describedby="tabla de tareas">
+          <thead>
+            <tr>
+              <th>Título</th>
+              <th>Descripción</th>
+              <th>Vence</th>
+            </tr>
+          </thead>
+          <tbody id="tbodyTareas">
+            <tr class="empty"><td colspan="3">Sin tareas por ahora.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="gestion_tareas.js"></script>
+</body>
+
+<footer>
+  <p class="footer-text">
+    &copy; 2025. Todos los derechos reservados.
+    Aplicacion de gestión de tareas con almacenamiento local.
+    Creada por Irving Abimael Montes Zapata
+</footer>
+</html>
